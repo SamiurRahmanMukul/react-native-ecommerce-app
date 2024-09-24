@@ -1,16 +1,39 @@
 import * as React from 'react';
-import { ROUTES } from '@utils/constant';
+import { COLORS, ROUTES } from '@utils/constant';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeRouter from './HomeRouter';
+import CustomDrawer from '@components/utilities/CustomDrawer';
+import { StyleSheet } from 'react-native';
 
 const Drawer = createDrawerNavigator();
 
 function MainRouter(): React.JSX.Element {
   return (
-    <Drawer.Navigator initialRouteName={ROUTES.HOME_PAGE} screenOptions={{ headerShown: false }}>
+    <Drawer.Navigator
+      screenOptions={{
+        headerShown: false,
+        drawerStyle: styles.drawerStyle,
+      }}
+      initialRouteName={ROUTES.HOME_PAGE}
+      drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen name={ROUTES.HOME_PAGE} component={HomeRouter} />
     </Drawer.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  drawerStyle: {
+    width: 300,
+    backgroundColor: COLORS.WHITE,
+    borderTopRightRadius: 20,
+    borderBottomRightRadius: 20,
+    overflow: 'hidden',
+  },
+  screenContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default MainRouter;
