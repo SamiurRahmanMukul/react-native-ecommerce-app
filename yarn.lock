@@ -4061,6 +4061,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: acd3e1ab9d8a433ecb3cc2f6a05ab95fe50b4a3cfc5ba47abb6cbf3754585fcb87b84e90c822a1f256c4198e3b41c7f6c391577ffc8678ad587fc0976b24fd57
+  languageName: node
+  linkType: hard
+
 "co@npm:^4.6.0":
   version: 4.6.0
   resolution: "co@npm:4.6.0"
@@ -7883,6 +7890,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.4.0
     babel-jest: ^29.6.3
     babel-plugin-module-resolver: ^5.0.2
+    clsx: ^2.1.1
     eslint: ^8.0.1
     eslint-config-standard-with-typescript: latest
     eslint-plugin-import: ^2.25.2
@@ -7900,6 +7908,7 @@ __metadata:
     react-native-screens: ^3.34.0
     react-native-vector-icons: ^10.2.0
     react-test-renderer: 18.3.1
+    tailwind-merge: ^2.5.2
     tailwindcss: 3.3.2
     typescript: "*"
   languageName: unknown
@@ -9965,6 +9974,13 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 53b1e247e68e05db7b3808b99b892bd36fb096e6fba213a06da7fab22045e97597db425c724f2bbd6c99a3c295e1e73f3e4de78592289f38431049e1277ca0ae
+  languageName: node
+  linkType: hard
+
+"tailwind-merge@npm:^2.5.2":
+  version: 2.5.2
+  resolution: "tailwind-merge@npm:2.5.2"
+  checksum: af745fc16245ac14eb5d3f0b9d076c024321877ad45f43b324465f6aa7f8b5de3816640594fbf6ac8b3500f70ff2687345787888744196ff6f82dfe9a1f99b97
   languageName: node
   linkType: hard
 

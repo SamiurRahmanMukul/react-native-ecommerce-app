@@ -10,9 +10,10 @@ module.exports = {
         alias: {
           '@assets': './src/assets',
           '@common': './src/common',
-          '@layouts': './src/layouts',
-          '@screens': './src/screens',
           '@routes': './src/routes',
+          '@screens': './src/screens',
+          '@layouts': './src/layouts',
+          '@components': './src/components',
           '@store': './src/store',
           '@src/types': './src/types',
           '@utils': './src/utils',

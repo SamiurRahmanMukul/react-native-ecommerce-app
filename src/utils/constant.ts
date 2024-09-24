@@ -6,6 +6,7 @@ export const COLORS = {
 };
 
 export const ROUTES = {
+  HOME_PAGE: 'Homepage',
   HOME: 'Home',
   SEARCH: 'Search',
   CART: 'Cart',

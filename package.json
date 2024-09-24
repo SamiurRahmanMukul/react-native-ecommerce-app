@@ -6,9 +6,8 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
-    "start": "react-native start",
+    "start": "react-native start --reset-cache",
     "test": "jest",
-    "reset-cache": "npx react-native start --reset-cache",
     "android:clean": "cd android && ./gradlew clean",
     "android:build": "cd android && ./gradlew bundleRelease"
   },
@@ -16,6 +15,7 @@
     "@react-navigation/bottom-tabs": "^6.6.1",
     "@react-navigation/drawer": "^6.7.2",
     "@react-navigation/native": "^6.1.18",
+    "clsx": "^2.1.1",
     "nativewind": "^2.0.11",
     "react": "18.3.1",
     "react-native": "0.75.3",
@@ -23,7 +23,8 @@
     "react-native-reanimated": "^3.15.3",
     "react-native-safe-area-context": "^4.11.0",
     "react-native-screens": "^3.34.0",
-    "react-native-vector-icons": "^10.2.0"
+    "react-native-vector-icons": "^10.2.0",
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
