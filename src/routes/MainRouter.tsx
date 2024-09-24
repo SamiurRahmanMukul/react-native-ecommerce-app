@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { COLORS, ROUTES } from '@utils/constant';
-import HomeScreen from '@screens/HomeScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SearchScreen from '@screens/SearchScreen';
 import CartScreen from '@screens/CartScreen';
 import ProfileScreen from '@screens/ProfileScreen';
 import { StyleSheet } from 'react-native';
+import HomeScreen from '@screens/HomeScreen';
 
 const Tab = createBottomTabNavigator();
 

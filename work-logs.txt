@@ -11,3 +11,4 @@
 [✅] 9. React Native Navigation setup and configure. // https://reactnavigation.org/docs/getting-started
 [✅] 10. Custom font family setup and configure. // https://medium.com/@usmanmarkaz126/how-to-use-custom-fonts-in-react-native-cli-5e7c9d29ddf1
 [✅] 11. React Native Vector Icons setup and configure. // https://github.com/oblador/react-native-vector-icons
+[✅] 12. React Native Bottom Tab Navigation setup and components make. // https://reactnavigation.org/docs/tab-based-navigation
