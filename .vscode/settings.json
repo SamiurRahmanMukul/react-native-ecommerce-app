@@ -3,5 +3,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": { "source.fixAll": "explicit" },
   "editor.formatOnSave": true,
-  "cSpell.words": ["mukul", "nativewind", "tailwindcss"]
+  "cSpell.words": ["gradlew", "Ionicons", "mukul", "nativewind", "tailwindcss"]
 }
