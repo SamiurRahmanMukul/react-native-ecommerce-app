@@ -1,0 +1,12 @@
+                ===> Mukul Store [E-commerce App] <===
+----------------------------------------------------------------------
+[✅] 1. React Native CLI project init.
+[ ] 2. Eslint setup and configure.
+[ ] 3. Prettier setup and configure.
+[ ] 4. NativeWind (Tailwind CSS) setup and configure.
+[ ] 5. GlueStack UI components library setup and configure.
+[ ] 6. App theme/color customize and constant configure.
+[ ] 7. React Native app splash screen setup and configure.
+[ ] 8. React Native Onboarding setup and configure.
+[ ] 9. React Native Navigation setup and configure.
+[✅] 10. Custom font family setup and configure. // https://medium.com/@usmanmarkaz126/how-to-use-custom-fonts-in-react-native-cli-5e7c9d29ddf1

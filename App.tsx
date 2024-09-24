@@ -28,16 +28,10 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Text className="text-justify m-2 text-[14px] text-black">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illo iste accusamus.
-            Aliquam quia aut dicta quos, sint reiciendis. Sapiente minima soluta, et, a
-            exercitationem eos alias unde sint ipsam tempore, nemo consectetur. Consequatur earum
-            iusto minus aut non aliquam nihil veniam vel itaque. Asperiores voluptatem voluptate
-            harum reprehenderit optio saepe est voluptates magni inventore labore nemo excepturi
-            mollitia nesciunt in quod, quidem libero, aperiam eveniet blanditiis deserunt, iste
-            earum? Maiores doloribus quod at illo eius. Quis, a ratione sit ipsum quaerat eveniet
-            sed. Recusandae sapiente nam exercitationem voluptatibus eveniet aliquam laboriosam quo
-            cum perspiciatis culpa nesciunt corrupti, expedita sunt?
+          <Text className="text-justify m-2 text-[14px] text-black font-font-poppins-medium">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus amet ratione
+            voluptatum, in expedita distinctio. Ad est, atque quam cupiditate earum a, molestiae
+            consectetur cum ipsam eligendi quibusdam neque repudiandae?
           </Text>
         </View>
       </ScrollView>
