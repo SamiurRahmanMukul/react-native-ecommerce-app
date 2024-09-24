@@ -6,8 +6,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function HomeScreen(): React.JSX.Element {
   return (
-    <View className="bg-white flex-1 justify-center items-center">
-      <View className="w-11/12 flex flex-row items-center justify-between">
+    <View className="justify-center items-center">
+      <View className="w-11/12 flex flex-row items-center justify-between py-5">
         <Ionicons name="menu" size={30} color={COLORS.BLACK} />
         <Text className="text-[22px] text-black font-font-poppins-medium">Gemstore</Text>
         <Ionicons name="notifications-outline" size={30} color={COLORS.BLACK} />

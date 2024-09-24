@@ -82,7 +82,7 @@ function HomeRouter(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    backgroundColor: COLORS.GRAY,
+    backgroundColor: COLORS.WHITE,
     borderTopWidth: 0,
     borderTopColor: 'transparent',
     height: 80,
@@ -96,6 +96,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.5,
     elevation: 5,
+    borderTopStartRadius: 20,
+    borderTopEndRadius: 20,
   },
 });
 
