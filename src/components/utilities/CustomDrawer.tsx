@@ -2,7 +2,6 @@ import * as React from 'react';
 import { View, Text, Image } from 'react-native';
 import { DrawerContentScrollView } from '@react-navigation/drawer';
 import DrawerItem from './DrawerItem';
-import { v4 as uuid } from 'uuid';
 
 export default function CustomDrawer(props: any) {
   return (
@@ -21,7 +20,7 @@ export default function CustomDrawer(props: any) {
       {props.state.routes.map((route: any, index: number) => {
         return (
           <DrawerItem
-            key={uuid()}
+            key={index}
             label={route.name}
             icon="home"
             focused={props.state.index === index}
