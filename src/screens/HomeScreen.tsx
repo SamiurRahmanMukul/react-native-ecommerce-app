@@ -4,7 +4,7 @@ import HomeCategory from '@components/utilities/HomeCategory';
 import { useNavigation } from '@react-navigation/native';
 import { COLORS } from '@utils/constant';
 import * as React from 'react';
-import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function HomeScreen(): React.JSX.Element {
@@ -12,6 +12,8 @@ function HomeScreen(): React.JSX.Element {
 
   return (
     <View className="justify-center items-center">
+      <StatusBar backgroundColor={COLORS.WHITE} barStyle="dark-content" />
+
       {/* header section */}
       <View className="w-11/12 flex flex-row items-center justify-between py-5">
         <TouchableOpacity onPress={() => navigation.openDrawer()}>
@@ -37,7 +39,7 @@ function HomeScreen(): React.JSX.Element {
             <Text className="text-[24px] font-font-poppins-medium text-black">Feature Product</Text>
 
             <TouchableOpacity>
-              <Text className="text-[20px] font-font-poppins-light">Show all</Text>
+              <Text className="text-[20px] font-font-poppins-light text-black">Show all</Text>
             </TouchableOpacity>
           </View>
 
@@ -65,8 +67,10 @@ function HomeScreen(): React.JSX.Element {
         {/* highlights section */}
         <View className="bg-[#F8F8FA] my-2 px-4 w-full flex flex-row items-center justify-between">
           <View className="flex-1">
-            <Text className="uppercase text-[17px] font-font-poppins-light">I new collection</Text>
-            <Text className="uppercase text-[25px] font-font-poppins-regular">
+            <Text className="uppercase text-[17px] font-font-poppins-light text-black">
+              I new collection
+            </Text>
+            <Text className="uppercase text-[25px] font-font-poppins-regular text-black">
               Hang out & Party
             </Text>
           </View>
@@ -83,7 +87,7 @@ function HomeScreen(): React.JSX.Element {
             <Text className="text-[24px] font-font-poppins-medium text-black">Recommended</Text>
 
             <TouchableOpacity>
-              <Text className="text-[20px] font-font-poppins-light">Show all</Text>
+              <Text className="text-[20px] font-font-poppins-light text-black">Show all</Text>
             </TouchableOpacity>
           </View>
 
@@ -110,16 +114,16 @@ function HomeScreen(): React.JSX.Element {
             <Text className="text-[24px] font-font-poppins-medium text-black">Top Collection</Text>
 
             <TouchableOpacity>
-              <Text className="text-[20px] font-font-poppins-light">Show all</Text>
+              <Text className="text-[20px] font-font-poppins-light text-black">Show all</Text>
             </TouchableOpacity>
           </View>
 
           <View className="bg-[#F8F8FA] flex flex-row items-center justify-between rounded-md px-4">
             <View className="flex-1">
-              <Text className="text-[20px] font-font-poppins-light capitalize">
+              <Text className="text-[20px] font-font-poppins-light capitalize text-black">
                 I sale up to 40%
               </Text>
-              <Text className="text-[30px] font-font-poppins-thin uppercase">
+              <Text className="text-[30px] font-font-poppins-thin uppercase text-black">
                 For slim and beauty
               </Text>
             </View>
@@ -129,10 +133,10 @@ function HomeScreen(): React.JSX.Element {
 
           <View className="bg-[#F8F8FA] flex flex-row items-center justify-between rounded-md px-4 mt-4">
             <View className="flex-1">
-              <Text className="text-[20px] font-font-poppins-thin capitalize">
+              <Text className="text-[20px] font-font-poppins-thin capitalize text-black">
                 I summer collection 2021
               </Text>
-              <Text className="text-[30px] font-font-poppins-medium uppercase">
+              <Text className="text-[30px] font-font-poppins-medium uppercase text-black">
                 Most sexy fabulous design
               </Text>
             </View>
@@ -144,15 +148,19 @@ function HomeScreen(): React.JSX.Element {
             <View className="flex-1 bg-[#F8F8FA] rounded-md flex flex-row items-center justify-between mr-2">
               <Image className="flex-1 rounded-md" source={require('@assets/images/dress-3.png')} />
               <View className="flex-1">
-                <Text className="text-[18px] font-font-poppins-light">T-Shirts</Text>
-                <Text className="text-[24px] font-font-poppins-medium">The Office Life</Text>
+                <Text className="text-[18px] font-font-poppins-light text-black">T-Shirts</Text>
+                <Text className="text-[24px] font-font-poppins-medium text-black">
+                  The Office Life
+                </Text>
               </View>
             </View>
 
             <View className="flex-1 bg-[#F8F8FA] rounded-md flex flex-row items-center justify-between">
               <View className="flex-1 ml-2">
-                <Text className="text-[18px] font-font-poppins-light">Dresses</Text>
-                <Text className="text-[22px] font-font-poppins-medium">Elegant Design</Text>
+                <Text className="text-[18px] font-font-poppins-light text-black">Dresses</Text>
+                <Text className="text-[22px] font-font-poppins-medium text-black">
+                  Elegant Design
+                </Text>
               </View>
 
               <Image className="flex-1 rounded-md" source={require('@assets/images/dress-4.png')} />

@@ -23,7 +23,7 @@ function HomeCategory({ title, icon, active = false }: HomeCategoryProps): React
         </View>
       </View>
 
-      <Text className="text-[14px] font-font-poppins-light">{title}</Text>
+      <Text className="text-[14px] font-font-poppins-light text-black">{title}</Text>
     </View>
   );
 }
