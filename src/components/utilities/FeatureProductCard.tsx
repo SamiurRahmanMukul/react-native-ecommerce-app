@@ -1,15 +1,13 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native';
 import * as React from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 
-function FeatureProductCard({
-  image,
-  title,
-  price,
-}: {
-  image: string | any;
-  title: string;
-  price: string;
-}): React.JSX.Element {
+interface FeatureProductCardProps {
+  readonly image: string | any;
+  readonly title: string;
+  readonly price: string;
+}
+
+function FeatureProductCard({ image, title, price }: FeatureProductCardProps): React.JSX.Element {
   return (
     <TouchableOpacity>
       <View className="flex flex-col items-start justify-center mr-5 last:mr-0">

@@ -3,7 +3,7 @@ import HomeCategory from '@components/utilities/HomeCategory';
 import { useNavigation } from '@react-navigation/native';
 import { COLORS } from '@utils/constant';
 import * as React from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function HomeScreen(): React.JSX.Element {

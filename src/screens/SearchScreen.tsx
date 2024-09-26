@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 function SearchScreen(): React.JSX.Element {
   return (

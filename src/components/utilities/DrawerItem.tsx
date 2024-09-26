@@ -1,7 +1,7 @@
 import cn from '@utils/cn';
 import { COLORS } from '@utils/constant';
 import * as React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 interface DrawerItemProps {

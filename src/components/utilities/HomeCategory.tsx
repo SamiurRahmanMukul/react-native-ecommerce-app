@@ -4,15 +4,13 @@ import * as React from 'react';
 import { Text, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-function HomeCategory({
-  title,
-  icon,
-  active = false,
-}: {
-  title: string;
-  icon: string;
-  active?: boolean;
-}): React.JSX.Element {
+interface HomeCategoryProps {
+  readonly title: string;
+  readonly icon: string;
+  readonly active?: boolean;
+}
+
+function HomeCategory({ title, icon, active = false }: HomeCategoryProps): React.JSX.Element {
   return (
     <View className="flex flex-col items-center justify-center space-y-1">
       <View

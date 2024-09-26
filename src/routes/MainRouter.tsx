@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { COLORS, ROUTES } from '@utils/constant';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import HomeRouter from './HomeRouter';
 import CustomDrawer from '@components/utilities/CustomDrawer';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { COLORS, ROUTES } from '@utils/constant';
+import * as React from 'react';
 import { StyleSheet } from 'react-native';
+import HomeRouter from './HomeRouter';
 
 const Drawer = createDrawerNavigator();
 
