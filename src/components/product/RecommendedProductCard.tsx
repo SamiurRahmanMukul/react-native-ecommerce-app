@@ -15,7 +15,11 @@ export default function RecommendedProductCard({
   return (
     <TouchableOpacity>
       <View className="bg-white w-[250px] h-[80px] flex flex-row items-center justify-start rounded-md space-x-2 mr-4 last:mr-0">
-        <Image className="w-[80px] h-[80px] object-cover" source={image} />
+        {typeof image === 'string' ? (
+          <Image className="w-[80px] h-[80px] object-cover" source={{ uri: image }} />
+        ) : (
+          <Image className="w-[80px] h-[80px] object-cover" source={image} />
+        )}
 
         <View>
           <Text className="text-[14px] font-font-poppins-semibold text-black mt-2">{title}</Text>

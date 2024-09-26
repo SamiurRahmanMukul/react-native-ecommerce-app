@@ -1,6 +1,6 @@
-import FeatureProductCard from '@components/utilities/FeatureProductCard';
+import FeatureProductCard from '@components/product/FeatureProductCard';
+import RecommendedProductCard from '@components/product/RecommendedProductCard';
 import HomeCategory from '@components/utilities/HomeCategory';
-import RecommendedProductCard from '@components/utilities/RecommendedProductCard';
 import { useNavigation } from '@react-navigation/native';
 import { COLORS } from '@utils/constant';
 import * as React from 'react';
