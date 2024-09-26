@@ -1,4 +1,5 @@
 import { DrawerContentScrollView } from '@react-navigation/drawer';
+import { ROUTES } from '@utils/constant';
 import * as React from 'react';
 import { Image, Text, View } from 'react-native';
 import DrawerItem from './DrawerItem';
@@ -13,7 +14,7 @@ export default function CustomDrawer(props: any) {
         />
         <Text className="text-[20px] font-font-poppins-semibold text-black mt-1">Jhon Smith</Text>
         <Text className="text-[14px] font-font-poppins-regular text-black -translate-y-2">
-          jhon_smith@gmail.com
+          smith@gmail.com
         </Text>
       </View>
 
@@ -21,7 +22,7 @@ export default function CustomDrawer(props: any) {
         return (
           <DrawerItem
             key={index}
-            label={route.name}
+            label={route.name === ROUTES.HOME_PAGE ? 'Home' : route.name}
             icon="home"
             focused={props.state.index === index}
             onPress={() => props.navigation.navigate(route.name)}
