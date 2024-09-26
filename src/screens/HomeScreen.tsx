@@ -1,5 +1,6 @@
 import FeatureProductCard from '@components/utilities/FeatureProductCard';
 import HomeCategory from '@components/utilities/HomeCategory';
+import RecommendedProductCard from '@components/utilities/RecommendedProductCard';
 import { useNavigation } from '@react-navigation/native';
 import { COLORS } from '@utils/constant';
 import * as React from 'react';
@@ -21,7 +22,7 @@ function HomeScreen(): React.JSX.Element {
         <Ionicons name="notifications-outline" size={30} color={COLORS.BLACK} />
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView className="mb-14" showsVerticalScrollIndicator={false}>
         {/* category section */}
         <View className="mt-5 w-11/12 flex flex-row items-center justify-around">
           <HomeCategory title="Woman" icon="woman" active />
@@ -36,7 +37,7 @@ function HomeScreen(): React.JSX.Element {
             <Text className="text-[26px] font-font-poppins-medium text-black">Feature Product</Text>
 
             <TouchableOpacity>
-              <Text className="text-[20px] font-font-poppins-regular">Show all</Text>
+              <Text className="text-[20px] font-font-poppins-light">Show all</Text>
             </TouchableOpacity>
           </View>
 
@@ -74,6 +75,33 @@ function HomeScreen(): React.JSX.Element {
             className="flex-1 object-contain"
             source={require('@assets/images/group-frame.png')}
           />
+        </View>
+
+        {/* recommended section */}
+        <View className="w-11/12 mx-auto">
+          <View className="flex flex-row items-center justify-between my-3">
+            <Text className="text-[26px] font-font-poppins-medium text-black">Recommended</Text>
+
+            <TouchableOpacity>
+              <Text className="text-[20px] font-font-poppins-light">Show all</Text>
+            </TouchableOpacity>
+          </View>
+
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <View className="flex flex-row items-center justify-between" style={{ width: '100%' }}>
+              <RecommendedProductCard
+                image={require('@assets/images/recommended-1.png')}
+                title="White fashion hoodie"
+                price="$ 29.00"
+              />
+
+              <RecommendedProductCard
+                image={require('@assets/images/recommended-2.png')}
+                title="Cotton tShirt"
+                price="$ 30.00"
+              />
+            </View>
+          </ScrollView>
         </View>
       </ScrollView>
     </View>
