@@ -34,7 +34,7 @@ function HomeScreen(): React.JSX.Element {
         {/* featured section */}
         <View className="w-11/12 mt-5 mx-auto">
           <View className="flex flex-row items-center justify-between my-3">
-            <Text className="text-[26px] font-font-poppins-medium text-black">Feature Product</Text>
+            <Text className="text-[24px] font-font-poppins-medium text-black">Feature Product</Text>
 
             <TouchableOpacity>
               <Text className="text-[20px] font-font-poppins-light">Show all</Text>
@@ -80,7 +80,7 @@ function HomeScreen(): React.JSX.Element {
         {/* recommended section */}
         <View className="w-11/12 mx-auto">
           <View className="flex flex-row items-center justify-between my-3">
-            <Text className="text-[26px] font-font-poppins-medium text-black">Recommended</Text>
+            <Text className="text-[24px] font-font-poppins-medium text-black">Recommended</Text>
 
             <TouchableOpacity>
               <Text className="text-[20px] font-font-poppins-light">Show all</Text>
@@ -102,6 +102,62 @@ function HomeScreen(): React.JSX.Element {
               />
             </View>
           </ScrollView>
+        </View>
+
+        {/* top collection section */}
+        <View className="w-11/12 mx-auto mt-2">
+          <View className="flex flex-row items-center justify-between my-3">
+            <Text className="text-[24px] font-font-poppins-medium text-black">Top Collection</Text>
+
+            <TouchableOpacity>
+              <Text className="text-[20px] font-font-poppins-light">Show all</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View className="bg-[#F8F8FA] flex flex-row items-center justify-between rounded-md px-4">
+            <View className="flex-1">
+              <Text className="text-[20px] font-font-poppins-light capitalize">
+                I sale up to 40%
+              </Text>
+              <Text className="text-[30px] font-font-poppins-thin uppercase">
+                For slim and beauty
+              </Text>
+            </View>
+
+            <Image className="flex-1" source={require('@assets/images/dress-1.png')} />
+          </View>
+
+          <View className="bg-[#F8F8FA] flex flex-row items-center justify-between rounded-md px-4 mt-4">
+            <View className="flex-1">
+              <Text className="text-[20px] font-font-poppins-thin capitalize">
+                I summer collection 2021
+              </Text>
+              <Text className="text-[30px] font-font-poppins-medium uppercase">
+                Most sexy fabulous design
+              </Text>
+            </View>
+
+            <Image className="flex-1" source={require('@assets/images/dress-2.png')} />
+          </View>
+
+          <View className="flex flex-row items-center justify-between mt-4">
+            <View className="flex-1 bg-[#F8F8FA] rounded-md flex flex-row items-center justify-between mr-2">
+              <Image className="flex-1 rounded-md" source={require('@assets/images/dress-3.png')} />
+              <View className="flex-1">
+                <Text className="text-[18px] font-font-poppins-light">T-Shirts</Text>
+                <Text className="text-[24px] font-font-poppins-medium">The Office Life</Text>
+              </View>
+            </View>
+
+            <View className="flex-1 bg-[#F8F8FA] rounded-md flex flex-row items-center justify-between">
+              <View className="flex-1 ml-2">
+                <Text className="text-[18px] font-font-poppins-light">Dresses</Text>
+                <Text className="text-[22px] font-font-poppins-medium">Elegant Design</Text>
+              </View>
+
+              <Image className="flex-1 rounded-md" source={require('@assets/images/dress-4.png')} />
+            </View>
+          </View>
         </View>
       </ScrollView>
     </View>
