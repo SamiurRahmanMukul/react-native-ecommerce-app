@@ -2,10 +2,11 @@ import FeatureProductCard from '@components/product/FeatureProductCard';
 import RecommendedProductCard from '@components/product/RecommendedProductCard';
 import HomeCategory from '@components/utilities/HomeCategory';
 import TabScreenLayout from '@layouts/TabScreenLayout';
+import { ROUTES } from '@utils/constant';
 import * as React from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
-function HomeScreen(): React.JSX.Element {
+function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Element {
   return (
     <TabScreenLayout title="Gemstore">
       {/* category section */}
@@ -23,7 +24,7 @@ function HomeScreen(): React.JSX.Element {
             Feature Product
           </Text>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate(ROUTES.FEATURE_PRODUCT)}>
             <Text className="text-[20px] font-font-poppins-light text-black dark:text-white">
               Show all
             </Text>
