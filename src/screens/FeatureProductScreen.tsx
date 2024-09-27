@@ -1,12 +1,9 @@
+import ProductScreenLayout from '@layouts/ProductScreenLayout';
+import { ROUTES } from '@utils/constant';
 import * as React from 'react';
-import { Text, View } from 'react-native';
 
 function FeatureProductScreen(): React.JSX.Element {
-  return (
-    <View>
-      <Text>FeatureProductScreen</Text>
-    </View>
-  );
+  return <ProductScreenLayout title={ROUTES.FEATURE_PRODUCT}>{/* ... */}</ProductScreenLayout>;
 }
 
 export default FeatureProductScreen;

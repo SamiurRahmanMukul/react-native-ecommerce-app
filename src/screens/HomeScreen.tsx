@@ -2,11 +2,15 @@ import FeatureProductCard from '@components/product/FeatureProductCard';
 import RecommendedProductCard from '@components/product/RecommendedProductCard';
 import HomeCategory from '@components/utilities/HomeCategory';
 import TabScreenLayout from '@layouts/TabScreenLayout';
-import { ROUTES } from '@utils/constant';
+import { COLORS, ROUTES } from '@utils/constant';
+import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Element {
+  const { colorScheme } = useColorScheme();
+
   return (
     <TabScreenLayout title="Gemstore">
       {/* category section */}
@@ -25,9 +29,11 @@ function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Ele
           </Text>
 
           <TouchableOpacity onPress={() => navigation.navigate(ROUTES.FEATURE_PRODUCT)}>
-            <Text className="text-[20px] font-font-poppins-light text-black dark:text-white">
-              Show all
-            </Text>
+            <Ionicons
+              color={colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK}
+              name="arrow-forward"
+              size={30}
+            />
           </TouchableOpacity>
         </View>
 
@@ -77,9 +83,11 @@ function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Ele
           </Text>
 
           <TouchableOpacity>
-            <Text className="text-[20px] font-font-poppins-light text-black dark:text-white">
-              Show all
-            </Text>
+            <Ionicons
+              color={colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK}
+              name="arrow-forward"
+              size={30}
+            />
           </TouchableOpacity>
         </View>
 
@@ -108,9 +116,11 @@ function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Ele
           </Text>
 
           <TouchableOpacity>
-            <Text className="text-[20px] font-font-poppins-light text-black dark:text-white">
-              Show all
-            </Text>
+            <Ionicons
+              color={colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK}
+              name="arrow-forward"
+              size={30}
+            />
           </TouchableOpacity>
         </View>
 

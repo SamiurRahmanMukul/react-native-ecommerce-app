@@ -7,7 +7,7 @@ const Stack = createNativeStackNavigator();
 
 function ProductRouter(): React.JSX.Element {
   return (
-    <Stack.Navigator initialRouteName={ROUTES.FEATURE_PRODUCT}>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name={ROUTES.FEATURE_PRODUCT} component={FeatureProductScreen} />
     </Stack.Navigator>
   );

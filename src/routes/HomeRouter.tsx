@@ -30,7 +30,10 @@ function HomeRouter(): React.JSX.Element {
           tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
           tabBarStyle: [
             styles.tabBarStyle,
-            { backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE },
+            {
+              shadowColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
+              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
+            },
           ],
         }}
       />
@@ -49,7 +52,10 @@ function HomeRouter(): React.JSX.Element {
           tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
           tabBarStyle: [
             styles.tabBarStyle,
-            { backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE },
+            {
+              shadowColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
+              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
+            },
           ],
         }}
       />
@@ -68,7 +74,10 @@ function HomeRouter(): React.JSX.Element {
           tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
           tabBarStyle: [
             styles.tabBarStyle,
-            { backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE },
+            {
+              shadowColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
+              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
+            },
           ],
         }}
       />
@@ -87,7 +96,10 @@ function HomeRouter(): React.JSX.Element {
           tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
           tabBarStyle: [
             styles.tabBarStyle,
-            { backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE },
+            {
+              shadowColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
+              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
+            },
           ],
         }}
       />
@@ -102,7 +114,6 @@ const styles = StyleSheet.create({
     height: 80,
     paddingBottom: 10,
     paddingTop: 10,
-    shadowColor: COLORS.BLACK,
     shadowOffset: {
       width: 0,
       height: 10,
@@ -110,8 +121,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.5,
     elevation: 5,
-    // borderTopStartRadius: 20,
-    // borderTopEndRadius: 20,
   },
 });
 
