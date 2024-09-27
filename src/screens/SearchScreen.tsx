@@ -7,7 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 function SearchScreen(): React.JSX.Element {
   return (
     <TabScreenLayout title="Discover">
-      <View className="flex flex-row items-center justify-between">
+      <View className="w-11/12 mx-auto flex flex-row items-center justify-between">
         <TextInput
           className="bg-gray w-[82%] h-[50px] rounded-md p-3 font-font-poppins-light text-black"
           style={[styles.shadowProp, { color: COLORS.BLACK }]}

@@ -1,5 +1,5 @@
 import { DrawerContentScrollView } from '@react-navigation/drawer';
-import { COLORS } from '@utils/constant';
+import { COLORS, ROUTES } from '@utils/constant';
 import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
@@ -30,7 +30,7 @@ export default function CustomDrawer(props: any) {
             <DrawerItem
               key={index}
               icon="home"
-              label={route.name}
+              label={route.name === ROUTES.HOME_PAGE ? 'Home' : route.name}
               focused={props.state.index === index}
               onPress={() => props.navigation.navigate(route.name)}
             />
