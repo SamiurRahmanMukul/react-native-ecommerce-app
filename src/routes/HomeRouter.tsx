@@ -30,11 +30,7 @@ function HomeRouter(): React.JSX.Element {
           tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
           tabBarStyle: [
             styles.tabBarStyle,
-            {
-              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
-              borderTopStartRadius: colorScheme === 'dark' ? 0 : 20,
-              borderTopEndRadius: colorScheme === 'dark' ? 0 : 20,
-            },
+            { backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE },
           ],
         }}
       />
@@ -53,11 +49,7 @@ function HomeRouter(): React.JSX.Element {
           tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
           tabBarStyle: [
             styles.tabBarStyle,
-            {
-              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
-              borderTopStartRadius: colorScheme === 'dark' ? 0 : 20,
-              borderTopEndRadius: colorScheme === 'dark' ? 0 : 20,
-            },
+            { backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE },
           ],
         }}
       />
@@ -76,11 +68,7 @@ function HomeRouter(): React.JSX.Element {
           tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
           tabBarStyle: [
             styles.tabBarStyle,
-            {
-              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
-              borderTopStartRadius: colorScheme === 'dark' ? 0 : 20,
-              borderTopEndRadius: colorScheme === 'dark' ? 0 : 20,
-            },
+            { backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE },
           ],
         }}
       />
@@ -99,11 +87,7 @@ function HomeRouter(): React.JSX.Element {
           tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
           tabBarStyle: [
             styles.tabBarStyle,
-            {
-              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
-              borderTopStartRadius: colorScheme === 'dark' ? 0 : 20,
-              borderTopEndRadius: colorScheme === 'dark' ? 0 : 20,
-            },
+            { backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE },
           ],
         }}
       />
@@ -126,6 +110,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.5,
     elevation: 5,
+    // borderTopStartRadius: 20,
+    // borderTopEndRadius: 20,
   },
 });
 
