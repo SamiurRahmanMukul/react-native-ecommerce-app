@@ -28,7 +28,12 @@ function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Ele
             Feature Product
           </Text>
 
-          <TouchableOpacity onPress={() => navigation.navigate(ROUTES.FEATURE_PRODUCT)}>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate(ROUTES.PRODUCT_ROUTER, {
+                screen: ROUTES.FEATURE_PRODUCT,
+              })
+            }>
             <Ionicons
               color={colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK}
               name="arrow-forward"
@@ -82,7 +87,12 @@ function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Ele
             Recommended
           </Text>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate(ROUTES.PRODUCT_ROUTER, {
+                screen: ROUTES.RECOMMENDED_PRODUCT,
+              })
+            }>
             <Ionicons
               color={colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK}
               name="arrow-forward"
@@ -115,7 +125,12 @@ function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Ele
             Top Collection
           </Text>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate(ROUTES.PRODUCT_ROUTER, {
+                screen: ROUTES.TOP_PRODUCT,
+              })
+            }>
             <Ionicons
               color={colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK}
               name="arrow-forward"

@@ -5,7 +5,6 @@ import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import HomeRouter from './HomeRouter';
-import ProductRouter from './ProductRouter';
 
 const Drawer = createDrawerNavigator();
 
@@ -24,7 +23,6 @@ function MainRouter(): React.JSX.Element {
       initialRouteName={ROUTES.HOME_PAGE}
       drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen name={ROUTES.HOME_PAGE} component={HomeRouter} />
-      <Drawer.Screen name={ROUTES.PRODUCT_PAGE} component={ProductRouter} />
     </Drawer.Navigator>
   );
 }
