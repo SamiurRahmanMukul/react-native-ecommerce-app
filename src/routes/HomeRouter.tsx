@@ -4,6 +4,7 @@ import HomeScreen from '@screens/HomeScreen';
 import ProfileScreen from '@screens/ProfileScreen';
 import SearchScreen from '@screens/SearchScreen';
 import { COLORS, ROUTES } from '@utils/constant';
+import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -11,6 +12,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const Tab = createBottomTabNavigator();
 
 function HomeRouter(): React.JSX.Element {
+  const { colorScheme } = useColorScheme();
+
   return (
     <Tab.Navigator>
       <Tab.Screen
@@ -24,8 +27,15 @@ function HomeRouter(): React.JSX.Element {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarActiveTintColor: COLORS.PRIMARY,
-          tabBarInactiveTintColor: COLORS.BLACK,
-          tabBarStyle: styles.tabBarStyle,
+          tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
+          tabBarStyle: [
+            styles.tabBarStyle,
+            {
+              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
+              borderTopStartRadius: colorScheme === 'dark' ? 0 : 20,
+              borderTopEndRadius: colorScheme === 'dark' ? 0 : 20,
+            },
+          ],
         }}
       />
 
@@ -40,8 +50,15 @@ function HomeRouter(): React.JSX.Element {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarActiveTintColor: COLORS.PRIMARY,
-          tabBarInactiveTintColor: COLORS.BLACK,
-          tabBarStyle: styles.tabBarStyle,
+          tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
+          tabBarStyle: [
+            styles.tabBarStyle,
+            {
+              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
+              borderTopStartRadius: colorScheme === 'dark' ? 0 : 20,
+              borderTopEndRadius: colorScheme === 'dark' ? 0 : 20,
+            },
+          ],
         }}
       />
 
@@ -56,8 +73,15 @@ function HomeRouter(): React.JSX.Element {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarActiveTintColor: COLORS.PRIMARY,
-          tabBarInactiveTintColor: COLORS.BLACK,
-          tabBarStyle: styles.tabBarStyle,
+          tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
+          tabBarStyle: [
+            styles.tabBarStyle,
+            {
+              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
+              borderTopStartRadius: colorScheme === 'dark' ? 0 : 20,
+              borderTopEndRadius: colorScheme === 'dark' ? 0 : 20,
+            },
+          ],
         }}
       />
 
@@ -72,8 +96,15 @@ function HomeRouter(): React.JSX.Element {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarActiveTintColor: COLORS.PRIMARY,
-          tabBarInactiveTintColor: COLORS.BLACK,
-          tabBarStyle: styles.tabBarStyle,
+          tabBarInactiveTintColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
+          tabBarStyle: [
+            styles.tabBarStyle,
+            {
+              backgroundColor: colorScheme === 'dark' ? '#000' : COLORS.WHITE,
+              borderTopStartRadius: colorScheme === 'dark' ? 0 : 20,
+              borderTopEndRadius: colorScheme === 'dark' ? 0 : 20,
+            },
+          ],
         }}
       />
     </Tab.Navigator>
@@ -82,7 +113,6 @@ function HomeRouter(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    backgroundColor: COLORS.WHITE,
     borderTopWidth: 0,
     borderTopColor: 'transparent',
     height: 80,
@@ -96,8 +126,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.5,
     elevation: 5,
-    borderTopStartRadius: 20,
-    borderTopEndRadius: 20,
   },
 });
 

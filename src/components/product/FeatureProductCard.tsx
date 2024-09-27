@@ -13,18 +13,19 @@ function FeatureProductCard({ image, title, price }: FeatureProductCardProps): R
       <View className="flex flex-col items-start justify-center mr-5 last:mr-0">
         {typeof image === 'string' ? (
           <Image
-            className="w-[200px] h-[250px] object-cover rounded-md drop-shadow-md"
+            className="w-[200px] h-[250px] object-cover rounded-md bg-white"
             source={{ uri: image }}
           />
         ) : (
-          <Image
-            className="w-[200px] h-[250px] object-cover rounded-md drop-shadow-md"
-            source={image}
-          />
+          <Image className="w-[200px] h-[250px] object-cover rounded-md bg-white" source={image} />
         )}
 
-        <Text className="text-[18px] font-font-poppins-semibold text-black mt-2">{title}</Text>
-        <Text className="text-[24px] font-font-poppins-semibold text-black">{price}</Text>
+        <Text className="text-[18px] font-font-poppins-semibold mt-2 text-black dark:text-white">
+          {title}
+        </Text>
+        <Text className="text-[24px] font-font-poppins-semibold text-black dark:text-white">
+          {price}
+        </Text>
       </View>
     </TouchableOpacity>
   );

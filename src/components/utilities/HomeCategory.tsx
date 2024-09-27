@@ -16,14 +16,16 @@ function HomeCategory({ title, icon, active = false }: HomeCategoryProps): React
       <View
         className={cn(
           'rounded-full p-1 border-[1px] border-solid',
-          active ? 'border-black' : 'border-gray',
+          active ? 'border-black dark:border-white' : 'border-gray',
         )}>
         <View className={cn('rounded-full p-1', active ? 'bg-black' : 'bg-gray')}>
           <Ionicons name={icon} size={30} color={active ? COLORS.WHITE : COLORS.BLACK} />
         </View>
       </View>
 
-      <Text className="text-[14px] font-font-poppins-light text-black">{title}</Text>
+      <Text className="text-[14px] font-font-poppins-light text-black dark:text-white">
+        {title}
+      </Text>
     </View>
   );
 }

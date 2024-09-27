@@ -3,30 +3,45 @@ import RecommendedProductCard from '@components/product/RecommendedProductCard';
 import HomeCategory from '@components/utilities/HomeCategory';
 import { useNavigation } from '@react-navigation/native';
 import { COLORS } from '@utils/constant';
+import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import { Image, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function HomeScreen(): React.JSX.Element {
+  const { colorScheme } = useColorScheme();
   const navigation: any = useNavigation();
 
   return (
-    <View className="justify-center items-center">
-      <StatusBar backgroundColor={COLORS.WHITE} barStyle="dark-content" />
+    <View className="justify-center items-center bg-white dark:bg-black">
+      <StatusBar
+        backgroundColor={colorScheme === 'dark' ? COLORS.BLACK : COLORS.WHITE}
+        barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'}
+      />
 
       {/* header section */}
       <View className="w-11/12 flex flex-row items-center justify-between py-5">
         <TouchableOpacity onPress={() => navigation.openDrawer()}>
-          <Ionicons name="menu" size={30} color={COLORS.BLACK} />
+          <Ionicons
+            name="menu"
+            size={30}
+            color={colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK}
+          />
         </TouchableOpacity>
 
-        <Text className="text-[22px] text-black font-font-poppins-medium">Gemstore</Text>
-        <Ionicons name="notifications-outline" size={30} color={COLORS.BLACK} />
+        <Text className="text-[22px] font-font-poppins-medium text-black dark:text-white">
+          Gemstore
+        </Text>
+        <Ionicons
+          name="notifications-outline"
+          size={30}
+          color={colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK}
+        />
       </View>
 
       <ScrollView className="mb-14" showsVerticalScrollIndicator={false}>
         {/* category section */}
-        <View className="mt-5 w-11/12 flex flex-row items-center justify-around">
+        <View className="mt-5 w-11/12 flex flex-row items-center justify-around mx-auto">
           <HomeCategory title="Woman" icon="woman" active />
           <HomeCategory title="Men" icon="man" />
           <HomeCategory title="Accessories" icon="recording-sharp" />
@@ -36,10 +51,14 @@ function HomeScreen(): React.JSX.Element {
         {/* featured section */}
         <View className="w-11/12 mt-5 mx-auto">
           <View className="flex flex-row items-center justify-between my-3">
-            <Text className="text-[24px] font-font-poppins-medium text-black">Feature Product</Text>
+            <Text className="text-[24px] font-font-poppins-medium text-black dark:text-white">
+              Feature Product
+            </Text>
 
             <TouchableOpacity>
-              <Text className="text-[20px] font-font-poppins-light text-black">Show all</Text>
+              <Text className="text-[20px] font-font-poppins-light text-black dark:text-white">
+                Show all
+              </Text>
             </TouchableOpacity>
           </View>
 
@@ -84,10 +103,14 @@ function HomeScreen(): React.JSX.Element {
         {/* recommended section */}
         <View className="w-11/12 mx-auto">
           <View className="flex flex-row items-center justify-between my-3">
-            <Text className="text-[24px] font-font-poppins-medium text-black">Recommended</Text>
+            <Text className="text-[24px] font-font-poppins-medium text-black dark:text-white">
+              Recommended
+            </Text>
 
             <TouchableOpacity>
-              <Text className="text-[20px] font-font-poppins-light text-black">Show all</Text>
+              <Text className="text-[20px] font-font-poppins-light text-black dark:text-white">
+                Show all
+              </Text>
             </TouchableOpacity>
           </View>
 
@@ -111,10 +134,14 @@ function HomeScreen(): React.JSX.Element {
         {/* top collection section */}
         <View className="w-11/12 mx-auto mt-2">
           <View className="flex flex-row items-center justify-between my-3">
-            <Text className="text-[24px] font-font-poppins-medium text-black">Top Collection</Text>
+            <Text className="text-[24px] font-font-poppins-medium text-black dark:text-white">
+              Top Collection
+            </Text>
 
             <TouchableOpacity>
-              <Text className="text-[20px] font-font-poppins-light text-black">Show all</Text>
+              <Text className="text-[20px] font-font-poppins-light text-black dark:text-white">
+                Show all
+              </Text>
             </TouchableOpacity>
           </View>
 
@@ -158,7 +185,7 @@ function HomeScreen(): React.JSX.Element {
             <View className="flex-1 bg-[#F8F8FA] rounded-md flex flex-row items-center justify-between">
               <View className="flex-1 ml-2">
                 <Text className="text-[18px] font-font-poppins-light text-black">Dresses</Text>
-                <Text className="text-[22px] font-font-poppins-medium text-black">
+                <Text className="text-[22px] font-font-poppins-medium text-black whitespace-nowrap">
                   Elegant Design
                 </Text>
               </View>

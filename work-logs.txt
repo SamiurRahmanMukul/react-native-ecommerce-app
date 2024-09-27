@@ -1,4 +1,4 @@
-                ===> Mukul Store [E-commerce App] <===
+                ===> Gemstore [E-commerce App] <===
 ----------------------------------------------------------------------
 [✅] 1. React Native CLI project init. // https://reactnative.dev/docs/environment-setup
 [ ] 2. Eslint setup and configure.
