@@ -17,4 +17,5 @@ export const ROUTES = {
   FEATURE_PRODUCT: 'Feature Product',
   RECOMMENDED_PRODUCT: 'Recommended Product',
   TOP_PRODUCT: 'Top Collection',
+  PRODUCT_DETAILS: 'Product Details',
 };

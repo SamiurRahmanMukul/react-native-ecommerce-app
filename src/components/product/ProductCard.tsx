@@ -30,7 +30,8 @@ function ProductCard({
       className="w-[45%] m-[2.5%] rounded-md"
       onPress={() =>
         navigation.navigate(ROUTES.PRODUCT_ROUTER, {
-          screen: ROUTES.FEATURE_PRODUCT,
+          screen: ROUTES.PRODUCT_DETAILS,
+          params: { id },
         })
       }>
       <Image
