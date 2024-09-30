@@ -47,7 +47,7 @@ function ProductCard({
         </Text>
 
         {discountPrice !== '' && (
-          <Text className="text-[16px] font-font-poppins-light text-gray line-through line">
+          <Text className="text-[16px] font-font-poppins-light text-black dark:text-gray line-through line">
             {price}
           </Text>
         )}
@@ -60,7 +60,7 @@ function ProductCard({
         <Ionicons name="star-half-sharp" color="#FBBF24" size={18} />
         <Ionicons name="star-outline" color="#FBBF24" size={18} />
 
-        <Text className="text-[12px] font-font-poppins-medium text-gray translate-x-1 translate-y-1">
+        <Text className="text-[12px] font-font-poppins-medium text-black dark:text-gray translate-x-1 translate-y-1">
           ({totalRatings})
         </Text>
       </View>

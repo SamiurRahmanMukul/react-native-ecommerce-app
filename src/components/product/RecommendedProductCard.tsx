@@ -18,8 +18,6 @@ export default function RecommendedProductCard({
 }: RecommendedProductCardProps): React.JSX.Element {
   const navigation: any = useNavigation();
 
-  console.log(id, image, title, price);
-
   return (
     <TouchableOpacity
       onPress={() =>
