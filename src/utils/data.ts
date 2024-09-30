@@ -1,7 +1,13 @@
+export enum PRODUCT_LABEL {
+  TOP_COLLECTION = 'Top Collection',
+  FEATURED = 'Featured',
+  RECOMMENDED = 'Recommended',
+}
+
 export const PRODUCTS = [
   {
     id: 1001,
-    label: 'TOP_COLLECTION',
+    label: PRODUCT_LABEL.TOP_COLLECTION,
     name: 'Linen Dress',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
@@ -41,7 +47,7 @@ export const PRODUCTS = [
   },
   {
     id: 1002,
-    label: 'TOP_COLLECTION',
+    label: PRODUCT_LABEL.TOP_COLLECTION,
     name: 'Filted Waist Dress',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
@@ -81,7 +87,7 @@ export const PRODUCTS = [
   },
   {
     id: 1003,
-    label: 'TOP_COLLECTION',
+    label: PRODUCT_LABEL.TOP_COLLECTION,
     name: 'Maxi Dress',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
@@ -121,7 +127,7 @@ export const PRODUCTS = [
   },
   {
     id: 1004,
-    label: 'TOP_COLLECTION',
+    label: PRODUCT_LABEL.TOP_COLLECTION,
     name: 'Front Tie Mini Dress',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
@@ -161,7 +167,7 @@ export const PRODUCTS = [
   },
   {
     id: 1005,
-    label: 'TOP_COLLECTION',
+    label: PRODUCT_LABEL.TOP_COLLECTION,
     name: 'Ohara Dress',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
@@ -201,7 +207,7 @@ export const PRODUCTS = [
   },
   {
     id: 1006,
-    label: 'TOP_COLLECTION',
+    label: PRODUCT_LABEL.TOP_COLLECTION,
     name: 'Tie Back Mini Dress',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
@@ -241,7 +247,7 @@ export const PRODUCTS = [
   },
   {
     id: 1007,
-    label: 'TOP_COLLECTION',
+    label: PRODUCT_LABEL.TOP_COLLECTION,
     name: 'Leaves Green Dress',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
@@ -281,7 +287,7 @@ export const PRODUCTS = [
   },
   {
     id: 1008,
-    label: 'TOP_COLLECTION',
+    label: PRODUCT_LABEL.TOP_COLLECTION,
     name: 'Off Shoulder Dress',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
@@ -321,7 +327,7 @@ export const PRODUCTS = [
   },
   {
     id: 1009,
-    label: 'FEATURED',
+    label: PRODUCT_LABEL.FEATURED,
     name: 'Knight Sweater',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
@@ -361,7 +367,7 @@ export const PRODUCTS = [
   },
   {
     id: 1010,
-    label: 'FEATURED',
+    label: PRODUCT_LABEL.FEATURED,
     name: 'Long Sleeve Dress',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
@@ -401,12 +407,92 @@ export const PRODUCTS = [
   },
   {
     id: 1011,
-    label: 'FEATURED',
+    label: PRODUCT_LABEL.FEATURED,
     name: 'Sportwear Set',
     description:
       'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
     image: require('@assets/images/feature-3.png'),
     price: '$ 80.00',
+    discount_price: '',
+    color: ['black', 'brown', 'red'],
+    size: ['XS', 'S', 'M', 'L', 'XL'],
+    rating: {
+      one_star: 80,
+      two_star: 12,
+      three_star: 5,
+      four_star: 3,
+      five_star: 0,
+      average_rating: 4.5,
+      total_ratings: 65,
+    },
+    ratings: [
+      {
+        id: 1,
+        name: 'Jenifer Rose',
+        image: require('@assets/images/rating-1.png'),
+        rating: 5,
+        message:
+          'I love it.  Awesome customer service!! Helped me out with adding an additional item to my order. Thanks again!',
+        date: 'Jan 23, 2024',
+      },
+      {
+        id: 2,
+        name: 'Kelly Rihana',
+        image: require('@assets/images/rating-2.png'),
+        rating: 5,
+        message: "I'm very happy with order, It was delivered on and good quality. Recommended!",
+        date: 'Jan 24, 2024',
+      },
+    ],
+  },
+  {
+    id: 1012,
+    label: PRODUCT_LABEL.RECOMMENDED,
+    name: 'White fashion hoodie',
+    description:
+      'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
+    image: require('@assets/images/recommended-1.png'),
+    price: '$ 29.00',
+    discount_price: '',
+    color: ['black', 'brown', 'red'],
+    size: ['XS', 'S', 'M', 'L', 'XL'],
+    rating: {
+      one_star: 80,
+      two_star: 12,
+      three_star: 5,
+      four_star: 3,
+      five_star: 0,
+      average_rating: 4.5,
+      total_ratings: 65,
+    },
+    ratings: [
+      {
+        id: 1,
+        name: 'Jenifer Rose',
+        image: require('@assets/images/rating-1.png'),
+        rating: 5,
+        message:
+          'I love it.  Awesome customer service!! Helped me out with adding an additional item to my order. Thanks again!',
+        date: 'Jan 23, 2024',
+      },
+      {
+        id: 2,
+        name: 'Kelly Rihana',
+        image: require('@assets/images/rating-2.png'),
+        rating: 5,
+        message: "I'm very happy with order, It was delivered on and good quality. Recommended!",
+        date: 'Jan 24, 2024',
+      },
+    ],
+  },
+  {
+    id: 1013,
+    label: PRODUCT_LABEL.RECOMMENDED,
+    name: 'Cotton tShirt',
+    description:
+      'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
+    image: require('@assets/images/recommended-2.png'),
+    price: '$ 30.00',
     discount_price: '',
     color: ['black', 'brown', 'red'],
     size: ['XS', 'S', 'M', 'L', 'XL'],

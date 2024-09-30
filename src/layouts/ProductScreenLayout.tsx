@@ -45,7 +45,9 @@ function ProductScreenLayout({
       </View>
 
       {/* main section */}
-      <ScrollView showsVerticalScrollIndicator={false}>{children}</ScrollView>
+      <ScrollView className="mb-12" showsVerticalScrollIndicator={false}>
+        {children}
+      </ScrollView>
     </View>
   );
 }

@@ -3,7 +3,7 @@ import RecommendedProductCard from '@components/product/RecommendedProductCard';
 import HomeCategory from '@components/utilities/HomeCategory';
 import TabScreenLayout from '@layouts/TabScreenLayout';
 import { COLORS, ROUTES } from '@utils/constant';
-import { PRODUCTS } from '@utils/data';
+import { PRODUCT_LABEL, PRODUCTS } from '@utils/data';
 import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
@@ -45,7 +45,7 @@ function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Ele
 
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <View className="flex flex-row items-center justify-between" style={{ width: '100%' }}>
-            {PRODUCTS.filter(product => product?.label === 'FEATURED').map(product => (
+            {PRODUCTS.filter(product => product?.label === PRODUCT_LABEL.FEATURED).map(product => (
               <FeatureProductCard
                 key={product?.id}
                 id={product?.id}
@@ -98,17 +98,17 @@ function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Ele
 
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <View className="flex flex-row items-center justify-between" style={{ width: '100%' }}>
-            <RecommendedProductCard
-              image={require('@assets/images/recommended-1.png')}
-              title="White fashion hoodie"
-              price="$ 29.00"
-            />
-
-            <RecommendedProductCard
-              image={require('@assets/images/recommended-2.png')}
-              title="Cotton tShirt"
-              price="$ 30.00"
-            />
+            {PRODUCTS.filter(product => product?.label === PRODUCT_LABEL.RECOMMENDED).map(
+              product => (
+                <RecommendedProductCard
+                  key={product?.id}
+                  id={product?.id}
+                  image={product?.image}
+                  title={product?.name}
+                  price={product?.price}
+                />
+              ),
+            )}
           </View>
         </ScrollView>
       </View>

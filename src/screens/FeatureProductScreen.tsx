@@ -1,15 +1,15 @@
 import ProductCard from '@components/product/ProductCard';
 import ProductScreenLayout from '@layouts/ProductScreenLayout';
 import { ROUTES } from '@utils/constant';
-import { PRODUCTS } from '@utils/data';
+import { PRODUCT_LABEL, PRODUCTS } from '@utils/data';
 import * as React from 'react';
 import { View } from 'react-native';
 
 function FeatureProductScreen(): React.JSX.Element {
   return (
     <ProductScreenLayout title={ROUTES.FEATURE_PRODUCT}>
-      <View className="w-[98%] mx-auto mt-2.5 mb-12 flex flex-row flex-wrap items-center justify-between">
-        {PRODUCTS.filter(product => product?.label === 'FEATURED').map(product => (
+      <View className="w-[98%] mx-auto mt-2.5 flex flex-row flex-wrap items-center justify-between">
+        {PRODUCTS.filter(product => product?.label === PRODUCT_LABEL.FEATURED).map(product => (
           <ProductCard
             key={product.id}
             id={product.id}
