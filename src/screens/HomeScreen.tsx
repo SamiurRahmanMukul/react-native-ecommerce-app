@@ -3,6 +3,7 @@ import RecommendedProductCard from '@components/product/RecommendedProductCard';
 import HomeCategory from '@components/utilities/HomeCategory';
 import TabScreenLayout from '@layouts/TabScreenLayout';
 import { COLORS, ROUTES } from '@utils/constant';
+import { PRODUCTS } from '@utils/data';
 import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
@@ -44,21 +45,15 @@ function HomeScreen({ navigation }: { readonly navigation: any }): React.JSX.Ele
 
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <View className="flex flex-row items-center justify-between" style={{ width: '100%' }}>
-            <FeatureProductCard
-              image={require('@assets/images/feature-1.png')}
-              title="Knight Sweater"
-              price="$ 60.00"
-            />
-            <FeatureProductCard
-              image={require('@assets/images/feature-2.png')}
-              title="Long Sleeve Dress"
-              price="$ 45.00"
-            />
-            <FeatureProductCard
-              image={require('@assets/images/feature-3.png')}
-              title="Sportwear Set"
-              price="$ 80.00"
-            />
+            {PRODUCTS.filter(product => product?.label === 'FEATURED').map(product => (
+              <FeatureProductCard
+                key={product?.id}
+                id={product?.id}
+                image={product?.image}
+                title={product?.name}
+                price={product?.price}
+              />
+            ))}
           </View>
         </ScrollView>
       </View>

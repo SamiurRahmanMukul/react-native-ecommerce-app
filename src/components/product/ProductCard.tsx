@@ -10,7 +10,6 @@ interface ProductCardProps {
   readonly image: string | any;
   readonly price: string;
   readonly discountPrice?: string;
-  readonly averageRating?: number;
   readonly totalRatings?: number;
 }
 
@@ -20,7 +19,6 @@ function ProductCard({
   image,
   price,
   discountPrice,
-  averageRating,
   totalRatings,
 }: ProductCardProps): React.JSX.Element {
   const navigation: any = useNavigation();
@@ -35,8 +33,8 @@ function ProductCard({
         })
       }>
       <Image
+        className="w-full h-[220px] object-cover rounded-md bg-white"
         source={typeof image === 'string' ? { uri: image } : image}
-        className="w-full h-[220px] object-cover rounded-md"
       />
 
       <Text className="text-[16px] font-font-poppins-medium text-black dark:text-white mt-2">
@@ -61,6 +59,7 @@ function ProductCard({
         <Ionicons name="star-sharp" color="#FBBF24" size={18} />
         <Ionicons name="star-half-sharp" color="#FBBF24" size={18} />
         <Ionicons name="star-outline" color="#FBBF24" size={18} />
+
         <Text className="text-[12px] font-font-poppins-medium text-gray translate-x-1 translate-y-1">
           ({totalRatings})
         </Text>
