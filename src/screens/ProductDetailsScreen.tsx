@@ -60,7 +60,7 @@ function ProductDetailsScreen({
               shadowColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
               borderTopStartRadius: 20,
               borderTopEndRadius: 20,
-              marginBottom: 156,
+              marginBottom: 108,
             },
           ]}>
           <View className="w-11/12 mx-auto my-5">
@@ -247,7 +247,7 @@ function ProductDetailsScreen({
       </ScrollView>
 
       <TouchableOpacity
-        className="absolute bottom-[48px] w-full h-[100px] bg-primary flex flex-row items-center justify-center space-x-2"
+        className="absolute bottom-0 w-full h-[100px] bg-primary flex flex-row items-center justify-center space-x-2"
         style={[
           styles.shadowStyle,
           {

@@ -1,5 +1,6 @@
 import CheckBox from '@react-native-community/checkbox';
-import { COLORS } from '@utils/constant';
+import { useNavigation } from '@react-navigation/native';
+import { COLORS, ROUTES } from '@utils/constant';
 import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
@@ -8,6 +9,7 @@ function CartProductCard({ product }: { readonly product: any }): React.JSX.Elem
   const [toggleCheckBox, setToggleCheckBox] = React.useState<boolean>(false);
   const [quantity, setQuantity] = React.useState<number>(1);
   const { colorScheme } = useColorScheme();
+  const navigation: any = useNavigation();
 
   return (
     <TouchableOpacity
@@ -15,7 +17,13 @@ function CartProductCard({ product }: { readonly product: any }): React.JSX.Elem
       style={[
         styles.shadowStyle,
         { shadowColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK },
-      ]}>
+      ]}
+      onPress={() =>
+        navigation.navigate(ROUTES.PRODUCT_ROUTER, {
+          screen: ROUTES.PRODUCT_DETAILS,
+          params: { id: product?.id },
+        })
+      }>
       <Image
         className="w-[25%] h-[80px] object-cover rounded-l-md bg-white"
         source={product?.image}
