@@ -1,6 +1,7 @@
+import ProductCard from '@components/product/ProductCard';
 import DynamicHeader from '@components/utilities/DynamicHeader';
-import { COLORS } from '@utils/constant';
-import { PRODUCTS } from '@utils/data';
+import { COLORS, ROUTES } from '@utils/constant';
+import { PRODUCT_LABEL, PRODUCTS } from '@utils/data';
 import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import {
@@ -18,15 +19,22 @@ const HeaderMaxHeight = 350;
 const HeaderMinHeight = 80;
 const ScrollDistance = HeaderMaxHeight - HeaderMinHeight;
 
-function ProductDetailsScreen({ route }: { route: any }): React.JSX.Element {
+function ProductDetailsScreen({
+  route,
+  navigation,
+}: {
+  route: any;
+  navigation: any;
+}): React.JSX.Element {
   const { colorScheme } = useColorScheme();
   const { id } = route.params;
   const product = PRODUCTS.find(product => product.id === id);
   const scrollOffsetY = React.useRef(new Animated.Value(0)).current;
   const [visibleDescription, setVisibleDescription] = React.useState(true);
+  const [visibleSimilar, setVisibleSimilar] = React.useState(false);
 
   return (
-    <View className="h-screen bg-white dark:bg-black">
+    <View className="h-screen bg-white dark:bg-black relative">
       <StatusBar
         backgroundColor={colorScheme === 'dark' ? '#000' : COLORS.GRAY}
         barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'}
@@ -52,6 +60,7 @@ function ProductDetailsScreen({ route }: { route: any }): React.JSX.Element {
               shadowColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
               borderTopStartRadius: 20,
               borderTopEndRadius: 20,
+              marginBottom: 156,
             },
           ]}>
           <View className="w-11/12 mx-auto my-5">
@@ -167,7 +176,7 @@ function ProductDetailsScreen({ route }: { route: any }): React.JSX.Element {
 
             <View className="flex flex-row items-center justify-between">
               <Text className="text-[18px] font-font-poppins-semibold text-black dark:text-white">
-                Descripton
+                Description
               </Text>
 
               <TouchableOpacity
@@ -198,9 +207,69 @@ function ProductDetailsScreen({ route }: { route: any }): React.JSX.Element {
                 <View className="w-full h-[1px] rounded-full bg-[#F3F3F6] mt-3 mb-3" />
               </>
             )}
+
+            <View className="flex flex-row items-center justify-between">
+              <Text className="text-[18px] font-font-poppins-semibold text-black dark:text-white">
+                Similar Products
+              </Text>
+
+              <TouchableOpacity
+                onPress={() => {
+                  setVisibleSimilar(!visibleSimilar);
+                }}>
+                <Ionicons
+                  color={colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK}
+                  name={visibleSimilar ? 'chevron-up-sharp' : 'chevron-down-sharp'}
+                  size={30}
+                />
+              </TouchableOpacity>
+            </View>
+
+            {visibleSimilar && (
+              <ScrollView showsHorizontalScrollIndicator={false}>
+                <View className="mx-auto mt-2.5 flex flex-row flex-wrap items-center justify-between">
+                  {PRODUCTS.filter(product => product?.label === PRODUCT_LABEL.TOP_COLLECTION).map(
+                    product => (
+                      <ProductCard
+                        key={product.id}
+                        id={product.id}
+                        name={product?.name}
+                        image={product?.image}
+                        price={product?.price}
+                        discountPrice={product?.discount_price}
+                        totalRatings={product?.rating?.total_ratings}
+                      />
+                    ),
+                  )}
+                </View>
+              </ScrollView>
+            )}
           </View>
         </View>
       </ScrollView>
+
+      <TouchableOpacity
+        className="absolute bottom-[48px] w-full h-[100px] bg-primary flex flex-row items-center justify-center space-x-2"
+        style={[
+          styles.shadowStyle,
+          {
+            shadowColor: colorScheme === 'dark' ? COLORS.WHITE : COLORS.BLACK,
+            borderTopStartRadius: 20,
+            borderTopEndRadius: 20,
+          },
+        ]}
+        onPress={() =>
+          navigation.navigate(ROUTES.HOME_PAGE, {
+            screen: ROUTES.CART,
+            params: { id },
+          })
+        }>
+        <Ionicons color={COLORS.WHITE} name="cart-outline" size={30} />
+
+        <Text className="text-[22px] text-white text-center font-font-poppins-semibold translate-y-1">
+          Add to Cart
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
