@@ -6,12 +6,14 @@
     "start": "react-native start --reset-cache",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "pod": "npx pod-install",
     "lint": "eslint .",
     "test": "jest",
     "android:clean": "cd android && ./gradlew clean",
     "android:build": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
+    "@react-native-community/checkbox": "^0.5.17",
     "@react-navigation/bottom-tabs": "^6.6.1",
     "@react-navigation/drawer": "^6.7.2",
     "@react-navigation/native": "^6.1.18",

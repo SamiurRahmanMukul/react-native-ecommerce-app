@@ -1,7 +1,7 @@
 import ProductCard from '@components/product/ProductCard';
 import DynamicHeader from '@components/utilities/DynamicHeader';
 import { COLORS, ROUTES } from '@utils/constant';
-import { PRODUCT_LABEL, PRODUCTS } from '@utils/data';
+import { PRODUCTS } from '@utils/data';
 import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import {
@@ -23,15 +23,15 @@ function ProductDetailsScreen({
   route,
   navigation,
 }: {
-  route: any;
-  navigation: any;
+  readonly route: any;
+  readonly navigation: any;
 }): React.JSX.Element {
   const { colorScheme } = useColorScheme();
   const { id } = route.params;
   const product = PRODUCTS.find(product => product.id === id);
   const scrollOffsetY = React.useRef(new Animated.Value(0)).current;
   const [visibleDescription, setVisibleDescription] = React.useState(true);
-  const [visibleSimilar, setVisibleSimilar] = React.useState(false);
+  const [visibleSimilar, setVisibleSimilar] = React.useState(true);
 
   return (
     <View className="h-screen bg-white dark:bg-black relative">
@@ -228,19 +228,17 @@ function ProductDetailsScreen({
             {visibleSimilar && (
               <ScrollView showsHorizontalScrollIndicator={false}>
                 <View className="mx-auto mt-2.5 flex flex-row flex-wrap items-center justify-between">
-                  {PRODUCTS.filter(product => product?.label === PRODUCT_LABEL.TOP_COLLECTION).map(
-                    product => (
-                      <ProductCard
-                        key={product.id}
-                        id={product.id}
-                        name={product?.name}
-                        image={product?.image}
-                        price={product?.price}
-                        discountPrice={product?.discount_price}
-                        totalRatings={product?.rating?.total_ratings}
-                      />
-                    ),
-                  )}
+                  {PRODUCTS.filter(product1 => product1?.label === product?.label).map(product2 => (
+                    <ProductCard
+                      key={product2?.id}
+                      id={product2?.id}
+                      name={product2?.name}
+                      image={product2?.image}
+                      price={product2?.price}
+                      discountPrice={product2?.discount_price}
+                      totalRatings={product2?.rating?.total_ratings}
+                    />
+                  ))}
                 </View>
               </ScrollView>
             )}
